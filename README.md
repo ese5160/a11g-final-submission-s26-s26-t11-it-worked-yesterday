@@ -95,10 +95,17 @@ Overall, this project gave us a strong understanding of embedded IoT system desi
 
 ![image/PCBA_Bottom.jpg](image/PCBA_Bottom.jpg)
 
+### Altium Design View
 
+![image/AD_2D.png](image/AD_2D.png)
 
-![]()
+![image/AD_3D.png](image/AD_3D.png)
 
+### Node-RED View
+
+![image/Node_RED_Dashboard.png](image/Node_RED_Dashboard.png)
+
+![image/Node_RED_Backend.png](image/Node_RED_Backend.png)
 
 ## 5. Codebase
 

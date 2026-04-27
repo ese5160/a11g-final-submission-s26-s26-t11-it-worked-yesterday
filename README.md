@@ -17,6 +17,42 @@
 
 ## 2. Project Summary
 
+### 2.1 Device Description
+
+Nova Pet is a voice-interactive desktop robotic dog designed to combine embedded control, audio interaction, and IoT connectivity in a small pet-like device. Our project was inspired by the idea of creating a companion-style robot that can respond to voice commands, show facial expressions, move with servo motors, and be controlled remotely through a web dashboard.
+
+### 2.2 Device Functionality
+
+Our system uses the SiWG917Y MCU as the main controller. The device can capture PCM audio from the microphone and send it through Wi-Fi to a cloud virtual machine for speech recognition. After the VM recognizes the command, it sends the result back to the MCU through MQTT, and the robotic dog performs the corresponding action.
+
+The robot includes multiple servo motors for movement, an OLED screen for facial expressions, and a speaker for PCM audio playback. It can perform basic actions such as moving forward, moving backward, turning left or right, sitting, standing, dancing, singing, and recording. The Node-RED web dashboard can also send control commands to the device and display status information such as Wi-Fi connection and current posture.
+
+In addition, our project supports OTA firmware updates. After the device connects to Wi-Fi, the user can trigger an update from the web page, and the MCU can download and switch to the updated firmware version.
+
+### 2.3 Challenges
+
+One major challenge was integrating many different modules into one embedded system. The microphone, speaker, servos, OLED display, Wi-Fi, MQTT communication, and OTA update all required separate drivers and tasks, so we had to carefully manage the system structure and avoid conflicts between different functions.
+
+Another challenge was audio processing. We needed to capture PCM audio from the microphone, upload it to the cloud, run speech recognition, and return commands to the MCU with acceptable delay. We also had to convert MP3 files into raw PCM data so that the speaker could play short sound effects correctly.
+
+We also wanted to add a local wake-word feature. The idea was that when the user says “Hey Nova,” the robotic dog would automatically start recording, so the user would not need to manually click the record button every time. We trained a small wake-word model for this function, but deploying the model on the MCU was more difficult than expected because of memory, runtime, and integration constraints. As a result, this feature was not fully completed in the final prototype.
+
+### 2.4 Prototype Learnings
+
+This project helped us understand the full process of building an IoT embedded product, from PCB design and power planning to firmware development and cloud communication. We learned that system integration is often more difficult than making each individual module work separately.
+
+We also learned the importance of debugging step by step. For each function, we first tested the basic driver, then integrated it into the whole system. This process helped us locate problems more clearly, especially when working with I²C, I²S, PWM, Wi-Fi, and MQTT.
+
+Another important learning was task management in an RTOS-based system. Since the project includes audio input, audio output, servo movement, display update, and network communication, we needed to think carefully about task priority, memory usage, and timing.
+
+### 2.5 Next Steps & Takeaways
+
+In the future, we could further improve the robotic dog by deploying a local speech recognition model directly on the MCU. With a more powerful MCU and larger RAM, the device could process voice commands locally instead of relying on a cloud VM. This would make the system faster, more responsive, and closer to a true edge AI embedded system.
+
+We could also improve the walking gait and turning motions to make the robot move more smoothly. In addition, we could polish the web dashboard, add more device status feedback, and make the OLED facial expressions more expressive.
+
+Overall, this project gave us a strong understanding of embedded IoT system design. We learned how hardware, firmware, cloud services, and user interaction work together in a real product.
+
 ## 3. Hardware & Software Requirements
 
 ### HRS

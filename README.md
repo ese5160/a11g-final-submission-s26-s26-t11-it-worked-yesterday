@@ -95,6 +95,10 @@ Overall, this project gave us a strong understanding of embedded IoT system desi
 
 ![image/PCBA_Bottom.jpg](image/PCBA_Bottom.jpg)
 
+### Thermal Camera
+
+![image/Thermal_camera.jpg](image/Thermal_camera.jpg)
+
 ### Altium Design View
 
 ![image/AD_2D.png](image/AD_2D.png)

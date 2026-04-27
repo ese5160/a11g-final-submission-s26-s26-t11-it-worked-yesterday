@@ -107,6 +107,10 @@ Overall, this project gave us a strong understanding of embedded IoT system desi
 
 ![image/Node_RED_Backend.png](image/Node_RED_Backend.png)
 
+### Block Diagram
+
+![image/Block_Diagram.png](image/Block_Diagram.png)
+
 ## 5. Codebase
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.

@@ -121,6 +121,6 @@ Overall, this project gave us a strong understanding of embedded IoT system desi
 
 Do *not* commit any of your source code to this repository. Rather, provide links to the other GitHub repository you've already been using with your firmware.
 
-- A link to your final embedded C firmware codebases
-- A link to your Node-RED dashboard code
-- Links to any other software required for the functionality of your device
+- A link to your final embedded C firmware codebases: [https://github.com/ese5160/final-project-firmware-s26-t11-it-worked-yesterday/tree/c9f9d60330b7afe2f8a9499ed75ac1fb1af8fafc/wifi_http_otaf_soc_4_28]](https://github.com/ese5160/final-project-firmware-s26-t11-it-worked-yesterday/tree/c9f9d60330b7afe2f8a9499ed75ac1fb1af8fafc/wifi_http_otaf_soc_4_28)
+- A link to your Node-RED dashboard code: [http://135.232.218.37:1880/dashboard/page1](http://135.232.218.37:1880/dashboard/page1)
+- Links to any other software required for the functionality of your device: None
